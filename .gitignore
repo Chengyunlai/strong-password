@@ -1,0 +1,9 @@
+# Generated distribution packages
+dist/
+
+# Never commit user vault data, encrypted backups, recovery materials, or local secrets
+*.vault.json
+*.backup.json
+*recovery*.txt
+.env
+.env.*

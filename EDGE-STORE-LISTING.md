@@ -26,7 +26,7 @@ Strong Password Vault Beta 面向需要在不知名网站注册账号的用户�
 
 ## 隐私政策 URL
 
-发布前请将 `PRIVACY.md` 放到一个公开 HTTPS 页面，并把 URL 填入商店后台。
+https://github.com/Chengyunlai/strong-password/blob/master/PRIVACY.md
 
 ## 权限说明
 
