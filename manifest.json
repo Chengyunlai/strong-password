@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Strong Password Vault",
+  "version": "0.1.0",
+  "description": "Generate strong passwords and keep them in a local encrypted vault.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Strong Password Vault",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
