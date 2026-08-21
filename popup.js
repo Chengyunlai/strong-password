@@ -8,6 +8,7 @@ import {
   saveVault,
   unlockVault,
 } from "./crypto.js";
+import { originFromTab, queryActiveTab } from "./tab-context.js";
 
 const storageGet = (key) => new Promise((resolve) => chrome.storage.local.get(key, resolve));
 const storageSet = (value) => new Promise((resolve) => chrome.storage.local.set(value, resolve));
@@ -16,7 +17,6 @@ const sessionArea = chrome.storage.session;
 const sessionGet = (key) => sessionArea ? new Promise((resolve) => sessionArea.get(key, resolve)) : Promise.resolve({});
 const sessionSet = (value) => sessionArea ? new Promise((resolve) => sessionArea.set(value, resolve)) : Promise.resolve();
 const sessionRemove = (key) => sessionArea ? new Promise((resolve) => sessionArea.remove(key, resolve)) : Promise.resolve();
-const queryTabs = () => new Promise((resolve) => chrome.tabs.query({ active: true, lastFocusedWindow: true }, resolve));
 const requestOriginAccess = (origin) => new Promise((resolve) => {
   if (!chrome.permissions?.request) return resolve(false);
   const origins = { origins: [`${origin}/*`] };
@@ -76,9 +76,8 @@ document.addEventListener("input", markActivity);
 
 const refreshContext = async () => {
   if (state.manualOrigin) return;
-  const [tab] = await queryTabs();
-  state.tab = tab;
-  try { state.origin = new URL(tab?.url || "").origin; } catch { state.origin = null; }
+  state.tab = await queryActiveTab(chrome.tabs);
+  state.origin = originFromTab(state.tab);
 };
 
 const renderSetup = () => {
@@ -222,7 +221,7 @@ const saveCurrentEntry = async () => {
 };
 
 const fillEntry = async (entry) => {
-  const [tab] = await queryTabs();
+  const tab = await queryActiveTab(chrome.tabs);
   if (!tab?.id || !tab.url) return showError("无法获取当前标签页");
   try {
     if (new URL(tab.url).origin !== entry.origin) throw new Error("当前页面已不是该条目对应的网站");

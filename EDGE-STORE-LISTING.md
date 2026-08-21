@@ -34,6 +34,6 @@ https://github.com/Chengyunlai/strong-password/blob/master/PRIVACY.md
 
 - `storage`：保存加密后的本机保险库记录。
 - `storage.session`：在当前浏览器会话内保存解锁所需的临时密钥材料；浏览器重启后清除。
-- `activeTab`：用户点击扩展后临时读取当前活动标签页的 HTTPS origin，用于匹配当前网站；不读取页面正文，也不读取其他标签页。
+- `tabs`：该权限技术上可访问所有标签页 URL/标题。由于持久侧边栏不能依赖短暂的 `activeTab`，侧边栏开启期间会在活动标签页切换或加载完成时读取该活动页 URL，并仅提取 origin 用于匹配；不会读取其他标签页、页面正文，也不会持久化或上传标签页元数据。
 - `scripting`：仅在用户点击“填充”后临时注入填充逻辑。
 - `optional_host_permissions`：首次填充某个 HTTPS 网站时按站点请求页面访问权限，不预先访问所有网站。
