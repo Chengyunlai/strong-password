@@ -1,6 +1,6 @@
 # Strong Password Vault
 
-一个面向 Chrome 和 Microsoft Edge 的 Manifest V3 浏览器插件 Beta：使用浏览器密码学 API 生成强密码，并将凭据保存在本机加密保险库中。
+一个默认使用简体中文的 Chrome 和 Microsoft Edge Manifest V3 浏览器插件 Beta：使用浏览器密码学 API 生成强密码，并将凭据保存在本机加密保险库中。
 
 ## 当前能力
 

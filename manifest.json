@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Strong Password Vault (Beta)",
-  "version": "0.2.0",
-  "description": "Beta: generate strong passwords and keep them in a local encrypted vault.",
+  "name": "__MSG_extension_name__",
+  "version": "0.2.1",
+  "description": "__MSG_extension_description__",
+  "default_locale": "zh_CN",
   "permissions": ["storage", "activeTab", "scripting"],
   "action": {
     "default_title": "Strong Password Vault",

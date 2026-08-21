@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E9F5F0"/><stop offset="1" stop-color="#D9E8FF"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1C2432"/><stop offset="1" stop-color="#0F141D"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#1D3148" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <circle cx="1120" cy="102" r="238" fill="#B4E9CF" opacity=".42"/><circle cx="122" cy="760" r="260" fill="#BED7FF" opacity=".55"/>
+  <text x="96" y="126" font-family="Arial, PingFang SC, sans-serif" font-size="58" font-weight="700" fill="#112B27">强密码库</text>
+  <text x="99" y="172" font-family="Arial, PingFang SC, sans-serif" font-size="25" fill="#40635C">本地加密 · 主动填充 · 不使用云同步</text>
+  <g filter="url(#shadow)">
+    <rect x="750" y="84" width="410" height="660" rx="28" fill="url(#card)"/>
+    <rect x="781" y="115" width="38" height="38" rx="12" fill="#78E3B0"/>
+    <path d="M800 123l12 5v9c0 8-5 14-12 18-7-4-12-10-12-18v-9l12-5z" fill="#10241B"/>
+    <text x="836" y="137" font-family="Arial, PingFang SC, sans-serif" font-size="20" font-weight="700" fill="#F7FAFC">强密码库</text>
+    <text x="836" y="158" font-family="Arial, PingFang SC, sans-serif" font-size="12" fill="#98A7B9">本机加密保险库</text>
+    <rect x="781" y="185" width="348" height="197" rx="16" fill="#1A222E" stroke="#334257"/>
+    <text x="804" y="217" font-family="Arial, PingFang SC, sans-serif" font-size="16" font-weight="700" fill="white">生成超强密码</text>
+    <text x="804" y="244" font-family="Arial, PingFang SC, sans-serif" font-size="12" fill="#AEB8C7">长度</text>
+    <rect x="804" y="254" width="137" height="38" rx="8" fill="#10151D" stroke="#3A485D"/><text x="819" y="279" font-family="Arial" font-size="14" fill="white">24</text>
+    <text x="962" y="244" font-family="Arial, PingFang SC, sans-serif" font-size="12" fill="#AEB8C7">字符集</text>
+    <rect x="962" y="254" width="144" height="38" rx="8" fill="#10151D" stroke="#3A485D"/><text x="976" y="279" font-family="Arial, PingFang SC, sans-serif" font-size="14" fill="white">含符号</text>
+    <rect x="804" y="306" width="302" height="40" rx="8" fill="#10151D" stroke="#3A485D"/><text x="818" y="332" font-family="monospace" font-size="14" fill="#E7EDF5">pR8!vZ2#qN7@xM4$kL9%tC6&amp;</text>
+    <rect x="804" y="355" width="144" height="34" rx="8" fill="#78E3B0"/><text x="834" y="377" font-family="Arial, PingFang SC, sans-serif" font-size="12" font-weight="700" fill="#0B251A">重新生成</text>
+    <rect x="962" y="355" width="144" height="34" rx="8" fill="#2B3545"/><text x="1018" y="377" font-family="Arial, PingFang SC, sans-serif" font-size="12" font-weight="700" fill="#F2F5F9">复制</text>
+    <rect x="781" y="401" width="348" height="194" rx="16" fill="#1A222E" stroke="#334257"/>
+    <text x="804" y="433" font-family="Arial, PingFang SC, sans-serif" font-size="16" font-weight="700" fill="white">已保存条目</text>
+    <rect x="804" y="450" width="302" height="54" rx="9" fill="#111821"/><text x="818" y="473" font-family="Arial, PingFang SC, sans-serif" font-size="13" font-weight="700" fill="white">示例网站</text><text x="818" y="491" font-family="Arial" font-size="11" fill="#9AA7B8">user@example.com · https://example.com</text><rect x="1037" y="462" width="53" height="28" rx="7" fill="#78E3B0"/><text x="1048" y="481" font-family="Arial, PingFang SC, sans-serif" font-size="11" font-weight="700" fill="#0B251A">填充</text>
+    <rect x="804" y="514" width="302" height="54" rx="9" fill="#111821"/><text x="818" y="537" font-family="Arial, PingFang SC, sans-serif" font-size="13" font-weight="700" fill="white">新注册账号</text><text x="818" y="555" font-family="Arial" font-size="11" fill="#9AA7B8">account@example.org · https://example.org</text>
+    <rect x="781" y="614" width="348" height="92" rx="16" fill="#15261F" stroke="#34775B"/>
+    <text x="804" y="645" font-family="Arial, PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#9AF1C6">严格 Origin 匹配</text>
+    <text x="804" y="671" font-family="Arial, PingFang SC, sans-serif" font-size="12" fill="#C8D8D1">仅在你主动操作且网站完全匹配时填充</text>
+  </g>
+  <g>
+    <rect x="98" y="259" width="527" height="304" rx="24" fill="#FFFFFF" opacity=".88"/>
+    <text x="140" y="322" font-family="Arial, PingFang SC, sans-serif" font-size="26" font-weight="700" fill="#16362E">为不知名网站生成独立强密码</text>
+    <text x="140" y="366" font-family="Arial, PingFang SC, sans-serif" font-size="19" fill="#4B6862">每一个站点都使用不同的随机密码，</text><text x="140" y="397" font-family="Arial, PingFang SC, sans-serif" font-size="19" fill="#4B6862">凭据加密保存在你的浏览器本地。</text>
+    <circle cx="154" cy="461" r="12" fill="#45B986"/><text x="180" y="468" font-family="Arial, PingFang SC, sans-serif" font-size="17" fill="#27473F">AES-GCM 本地加密</text>
+    <circle cx="154" cy="506" r="12" fill="#45B986"/><text x="180" y="513" font-family="Arial, PingFang SC, sans-serif" font-size="17" fill="#27473F">不提供云同步，不上传凭据</text>
+  </g>
+  <text x="98" y="694" font-family="Arial, PingFang SC, sans-serif" font-size="17" fill="#4E6962">Beta 版本 · 请优先用于低风险网站</text>
+</svg>
