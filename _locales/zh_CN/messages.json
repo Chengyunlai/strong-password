@@ -1,6 +1,6 @@
 {
   "extension_name": {
-    "message": "强密码库（Beta）"
+    "message": "强密码库"
   },
   "extension_description": {
     "message": "生成高强度随机密码，并在本机加密保险库中安全保存和主动填充。"

@@ -1,6 +1,6 @@
 {
   "extension_name": {
-    "message": "Strong Password Vault (Beta)"
+    "message": "Strong Password Vault"
   },
   "extension_description": {
     "message": "Generate strong passwords and store credentials in a local encrypted vault."

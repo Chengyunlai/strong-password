@@ -1,19 +1,26 @@
 {
   "manifest_version": 3,
   "name": "__MSG_extension_name__",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "__MSG_extension_description__",
   "default_locale": "zh_CN",
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["storage", "activeTab", "scripting", "sidePanel"],
+  "optional_host_permissions": ["https://*/*"],
   "action": {
     "default_title": "Strong Password Vault",
-    "default_popup": "popup.html",
     "default_icon": {
       "16": "assets/icon-16.png",
       "32": "assets/icon-32.png",
       "48": "assets/icon-48.png",
       "128": "assets/icon-128.png"
     }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
   },
   "icons": {
     "16": "assets/icon-16.png",

@@ -38,5 +38,5 @@
     <circle cx="154" cy="461" r="12" fill="#45B986"/><text x="180" y="468" font-family="Arial, PingFang SC, sans-serif" font-size="17" fill="#27473F">AES-GCM 本地加密</text>
     <circle cx="154" cy="506" r="12" fill="#45B986"/><text x="180" y="513" font-family="Arial, PingFang SC, sans-serif" font-size="17" fill="#27473F">不提供云同步，不上传凭据</text>
   </g>
-  <text x="98" y="694" font-family="Arial, PingFang SC, sans-serif" font-size="17" fill="#4E6962">Beta 版本 · 请优先用于低风险网站</text>
+  <text x="98" y="694" font-family="Arial, PingFang SC, sans-serif" font-size="17" fill="#4E6962">1.0 正式版 · 本地加密 · 主动填充</text>
 </svg>

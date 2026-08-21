@@ -55,9 +55,10 @@ export const createVault = async (masterPassword) => {
 };
 
 // The vault key is kept extractable only in the unlocked extension context so a
-// recovery flow can re-wrap it under a new master password. It is never stored
-// outside the encrypted record.
-const importVaultKey = async (raw) => crypto.subtle.importKey("raw", fromBase64(raw), { name: "AES-GCM" }, true, ["encrypt", "decrypt"]);
+// recovery flow can re-wrap it under a new master password. During an unlocked
+// browser session the raw key is also held in chrome.storage.session so the
+// side panel can reopen without asking for the master password again.
+export const importVaultKey = async (raw) => crypto.subtle.importKey("raw", fromBase64(raw), { name: "AES-GCM" }, true, ["encrypt", "decrypt"]);
 
 export const unlockVault = async (record, secret, mode = "master") => {
   const salt = fromBase64(record.salt);
@@ -78,13 +79,13 @@ export const changeMasterPassword = async (record, oldSecret, newSecret, mode = 
     recoveryKey,
     record: {
       ...record,
-      masterWrap: await seal(await exportKey(unlocked.vaultKey), nextKey),
-      recoveryWrap: await seal(await exportKey(unlocked.vaultKey), recoveryDerivedKey),
+      masterWrap: await seal(await exportVaultKey(unlocked.vaultKey), nextKey),
+      recoveryWrap: await seal(await exportVaultKey(unlocked.vaultKey), recoveryDerivedKey),
     },
   };
 };
 
-const exportKey = async (key) => toBase64(new Uint8Array(await crypto.subtle.exportKey("raw", key)));
+export const exportVaultKey = async (key) => toBase64(new Uint8Array(await crypto.subtle.exportKey("raw", key)));
 
 export const saveVault = async (record, vaultKey, vault) => ({ ...record, data: await seal(JSON.stringify(vault), vaultKey) });
 
