@@ -24,6 +24,7 @@ test("wrong secret cannot open the vault and recovery can rotate master", async 
   await assert.rejects(() => unlockVault(created.record, "wrong password"));
   const rotated = await changeMasterPassword(created.record, created.recoveryKey, "a new sufficiently long password", "recovery");
   await assert.rejects(() => unlockVault(rotated.record, created.recoveryKey, "recovery"));
+  await unlockVault(rotated.record, rotated.recoveryKey, "recovery");
   const unlocked = await unlockVault(rotated.record, "a new sufficiently long password");
   const saved = await saveVault(rotated.record, unlocked.vaultKey, { entries: [{ origin: "https://example.com", password: "secret" }] });
   const reopened = await unlockVault(saved, "a new sufficiently long password");

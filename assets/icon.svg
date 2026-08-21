@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Strong Password Vault">
+  <defs>
+    <linearGradient id="surface" x1="86" y1="55" x2="430" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9AF1C6"/>
+      <stop offset="1" stop-color="#35A979"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="#111827"/>
+  <path d="M256 61 407 118v119c0 100-61 174-151 215C166 411 105 337 105 237V118l151-57Z" fill="url(#surface)"/>
+  <path d="M256 89 382 137v100c0 82-46 143-126 182-80-39-126-100-126-182V137l126-48Z" fill="#14251F" opacity=".22"/>
+  <rect x="164" y="236" width="184" height="137" rx="29" fill="#101A17"/>
+  <path d="M202 236v-28c0-30 24-54 54-54s54 24 54 54v28" fill="none" stroke="#101A17" stroke-width="31" stroke-linecap="round"/>
+  <circle cx="256" cy="300" r="18" fill="#9AF1C6"/>
+  <path d="M256 318v23" stroke="#9AF1C6" stroke-width="16" stroke-linecap="round"/>
+</svg>
