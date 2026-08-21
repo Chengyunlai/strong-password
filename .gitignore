@@ -1,5 +1,6 @@
 # Generated distribution packages
 dist/
+.DS_Store
 
 # Never commit user vault data, encrypted backups, recovery materials, or local secrets
 *.vault.json
